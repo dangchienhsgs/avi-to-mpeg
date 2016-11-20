@@ -20,7 +20,9 @@ class Window(Ui_FormClass, UiFormBase):
     def __init__(self, app):
         super(Window, self).__init__()
         self.setupUi(self)
+        self.setWindowTitle("MPEG-MJPEG Video Converter")
         self.app = app
+
 
     @pyqtSlot()
     def on_select_button_clicked(self):
