@@ -47,6 +47,10 @@ class Window(Ui_FormClass, UiFormBase):
         input = "%s" % self.line_open_path.text()
         output = "%s" % self.line_save_path.text()
 
+        if input == "" or output == "":
+            QMessageBox.about(self, "Error", "Input or Output is not set")
+            return
+
         type = ""
         if self.mpeg_radio_button.isChecked():
             type = "MPEG"
